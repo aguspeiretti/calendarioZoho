@@ -1,0 +1,91 @@
+
+.rbc-header{
+  color: white;
+  font-size: 14px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px !important;
+  background-color: #17405d;
+  font-family: sans-serif;
+  font-family: sans-serif;
+}
+
+.rbc-allday-cell{
+  display: none;
+}
+
+.rbc-time-header-cell .rbc-today{
+  background-color: #04aa6d;
+}
+
+.rbc-time-slot{
+  color:#17405d ;
+  z-index: 1;
+  padding: 0;
+}
+
+
+
+
+
+
+/* Event styles */
+.rbc-events-container{
+  margin: 0 5px 0 0 !important;
+}
+.rbc-event,
+.rbc-backgroud-event{
+  padding: 0px !important;
+  border: 1px solid rgb(0, 0, 0) !important;
+  min-height: 10px !important;
+  min-width: 10px !important;
+  max-width: 400px !important;
+  display: flex !important;
+
+}
+.rbc-event{
+  width: 200px !important;
+  font-family: sans-serif;
+  background-color: #000000 !important;
+  width: 100% !important;
+ 
+  
+}
+
+
+.rbc-event-content{
+  width: 100% !important;
+}
+
+/*Timelots custom */
+.rbc-event-label{
+  display: none !important;
+}
+
+.rbc-timeslot-group{
+  min-height: 120px !important;
+}
+.rbc-time-slot {
+display: flex;
+flex-direction: column;
+
+}
+
+.rbc-day-slot .rbc-time-slot{
+  border-top: 1px solid #a3a3a3 !important;
+
+}
+.evento{
+
+  height: 100%;
+  width: 100%;
+  background-color: #04aa6d;
+  display: flex;
+  font-size: 12px;
+  white-space: nowrap; /* Evita que el texto se salga de línea */
+  position: relative;
+
+    align-items: center;
+    padding-left: 5px;
+}
