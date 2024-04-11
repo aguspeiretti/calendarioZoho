@@ -1,82 +1,14 @@
-/*.rbc-header{
-  color: white;
-  font-size: 14px !important;
+.container{
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 36px !important;
-  background-color: #17405d;
-  font-family: sans-serif;
-}
-.rbc-allday-cell{
-  display: none;
-}
-.rbc-time-header-cell .rbc-today{
-  background-color: #780ac2;
-}
-.rbc-time-slot{
-  color:#17405d ;
-  z-index: 1;
-  padding: 0;
+  justify-content: end;
 }
 
-.rbc-timeslot-group{
-  min-height:160px !important;
+.calendar-size{
+  width: 90vw;
+  height: 100vh;
+  background-Color: "white";
+  color: "black";
 }
-.rbc-event,
-.rbc-backgroud-event{
-  padding:  0px !important;
-  border: 1px solid rgb(0, 0, 0) !important;
-  min-height: 10px !important;
-  max-width: 400px !important;
-  /* min-width: 100%; */
- /* display: flex !important;
-  font-family: sans-serif;
-  font-size: 10px;
-  align-items: center;
-  justify-content: center;
-
-  
-}
-.rbc-event-content{
-  width: 100%;
-  
-}
-.rbc-event-label{
-  width: 30px !important;
-  white-space: wrap;
-  padding: 0 !important;
-  margin: 0!important ;
-  display: flex!important;
-  justify-content: center!important;
-  align-items: center!important;
-  
-}
-
-.rbc-time-slot{
-  color:#17405d ;
-  z-index: 1;
-  padding: 0;
-}
-.rbc-day-slot .rbc-time-slot{
-  border-top: 1px solid #d1d1d1 !important;
-
-}
-
-.evento{
-  display: flex;
-  height: 100%;
-  max-height: 10px !important;
-  align-items: center;
-  padding: 10px !important;
-  /* white-space: nowrap; */
-/*  text-overflow: ellipsis !important;
-  background-color: blue;
-}
-
-.rbc-month-row .rbc-row-bg{
-  height: 500px !important;
-}*/
 
 .rbc-timeslot-group{
   min-height: 120px !important;
@@ -123,11 +55,15 @@
   width: 100%;
   height: 100%;
   margin: 0;
-  padding-left: 15px;
+  padding-left:2px;
   list-style-type: none;
   display: flex;
   align-items: center;
  
+}
+.evento ul svg{
+  margin-right: 2px;
+  font-size: 10px;
 }
 .evento ul li{
   height: 14px;
@@ -138,7 +74,7 @@
 }
 .pautada ul li::before {
   padding: 0;
-  content: "\2022"; /* Código del punto */
+  content: \2022; /* Código del punto */
   color: #FFA246 ; /* Color deseado */
   font-size: 25px;
   display: inline-block;
@@ -159,7 +95,7 @@
 
 .por-pautar ul li::before {
   padding: 0;
-  content: "\2022"; /* Código del punto */
+  content: \2022; /* Código del punto */
   color: #F8F65F ; /* Color deseado */
   font-size: 25px;
   display: inline-block;
@@ -179,7 +115,7 @@
 }
 .realizada ul li::before {
   padding: 0;
-  content: "\2022"; /* Código del punto */
+  content: \2022; /* Código del punto */
   color: #5590FF ; /* Color deseado */
   font-size: 25px;
   display: inline-block;
@@ -199,7 +135,7 @@
 }
 .inconvenitente ul li::before {
   padding: 0;
-  content: "\2022"; /* Código del punto */
+  content: \2022; /* Código del punto */
   color: #8de26b ; /* Color deseado */
   font-size: 25px;
   display: inline-block;
@@ -220,7 +156,7 @@
 
 .sin-conferencia ul li::before {
   padding: 0;
-  content: "\2022"; /* Código del punto */
+  content: \2022; /* Código del punto */
   color: #8a8a8a ; /* Color deseado */
   font-size: 25px;
   display: inline-block;
@@ -241,7 +177,7 @@
 
 .consultada-profesional ul li::before {
   padding: 0;
-  content: "\2022"; /* Código del punto */
+  content: \2022; /* Código del punto */
   color: #E789FF ; /* Color deseado */
   font-size: 25px;
   display: inline-block;
@@ -261,7 +197,7 @@
 }
 .consultada-cliente ul li::before {
   padding: 0;
-  content: "\2022"; /* Código del punto */
+  content: \2022; /* Código del punto */
   color: #FF4E47 ; /* Color deseado */
   font-size: 25px;
   display: inline-block;
@@ -283,6 +219,84 @@
   background-color: #dcdcdc; /* Cambia el color de fondo en el hover */
 }
 
-.rbc-tooltip {
-  background-color: #ffcc00 !important; /* Cambia este valor al color deseado */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(252, 251, 251);
+ width: 550px;
+ height: 450px;
+  z-index: 9999;
+ border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: 0px 0px 44px 4px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 44px 4px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 44px 4px rgba(0,0,0,0.75);
+}
+
+.popup-content {
+  width: 90%;
+  height: 85%;
+  text-align: center;
+  background-color: #8de26b;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+/* Estilo para oscurecer el fondo */
+ .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Opacidad del fondo */
+   z-index: 9998;
+}
+
+.selector{
+  width: 15vw;
+  height: 100vh;
+background-color: white;
+  color: black;
+  padding: 0 10px;
+  
+}
+.selector select{
+  width: 100%;
+  border-radius: 5px;
+  height: 30px;
+} 
+
+/* ocultar vista mensual */
+
+
+
+.rbc-month-header > :last-child,
+  .rbc-month-header > :nth-last-child(2) {
+  display: none;
+}
+
+.rbc-row-segment {
+    flex-basis: 20% !important;
+    max-width: 20% !important;
+}
+
+.rbc-month-row > .rbc-row-bg > :first-child,
+.rbc-month-row > .rbc-row-bg > :last-child {
+  display: none;
+}
+
+.rbc-row-content > .rbc-row > .rbc-date-cell:first-child,
+.rbc-row-content > .rbc-row > .rbc-date-cell:last-child {
+  display:none;
 }
